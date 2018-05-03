@@ -1,0 +1,24 @@
+! Rofi Settings
+rofi.sidebar-mode:	true
+rofi.width:	60
+rofi.padding:	250
+rofi.fullscreen:	true
+rofi.fixed-num-lines:	true
+rofi.bw:	0
+rofi.location:	0
+rofi.terminal:	termite
+rofi.lines:	8
+rofi.eh:	1
+rofi.hide-scrollbar:	true
+rofi.font:	Migu 1M Bold 20
+rofi.fake-transparent:	true
+
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #282828, #a89984, #282828
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #282828, #ebdbb2, #282828, #d79921, #fbf1c7
+rofi.color-active: #d79921, #282828, #d79921, #fabd2f, #282828
+rofi.color-urgent: #cc241d, #282828, #cc241d, #fb4934, #282828
