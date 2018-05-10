@@ -8,4 +8,3 @@ export LANG=en_US.UTF-8
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
