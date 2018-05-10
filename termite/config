@@ -4,7 +4,9 @@ allow_bold = true
 #clickable_url = true
 dynamic_title = true
 #font = Ricty Regular 12
-font = Migu 1M Regular 12
+#font = Migu 1M Regular 12
+font = Hack Regular 12
+#font = Ubuntu Mono derivative Powerline Regular 13
 
 #fullscreen = true
 #geometry = 640x480
