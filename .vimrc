@@ -64,3 +64,13 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " クリップボード
 set clipboard=unnamedplus
+
+" Plugins by vim-plug
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
