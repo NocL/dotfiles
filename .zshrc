@@ -3,10 +3,7 @@
 # Language
 export LANG=en_US.UTF-8
 
-# Prompt
-#autoload -U promptinit && promptinit
-#prompt suse
-
+# Powerline 
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
 }
@@ -33,5 +30,19 @@ esac
 # alias
 alias ls='ls --color=auto'
 
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_dups
+setopt share_history
+setopt auto_pushd
+setopt pushd_ignore_dups
+
+# Compinit
+autoload -Uz compinit && compinit
+
 # for fuckin %
 sleep 1 && clear
+
