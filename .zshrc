@@ -46,6 +46,20 @@ setopt pushd_ignore_dups
 # Compinit
 autoload -Uz compinit && compinit
 
+# zplug
+source ~/.zplug/init.zsh
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+# zplug hilghting
+zplug "zsh-users/zsh-syntax-highlighting"
+# history 
+zplug "zsh-users/zsh-history-substring-search"
+# completion
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "chrissicool/zsh-256color"
+
+zplug load
+
 # for fuckin %
 sleep 1 && clear
 
