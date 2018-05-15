@@ -46,6 +46,13 @@ setopt pushd_ignore_dups
 # Compinit
 autoload -Uz compinit && compinit
 
+# Colors
+export LSCOLORS=exfxcxdxbxegedabagacad
+zstyle ':completion:*' list-colors di=34 ln=35 ex=31
+zstyle ':completion:*:kill:*' list-colors '=(#b) #([0-9]#)*( *[a-z])*=34=31=33'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
+
 # zplug
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
