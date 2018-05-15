@@ -27,6 +27,9 @@ case $TERM in
     ;;
 esac
 
+# tmux
+[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+
 # alias
 alias ls='ls --color=auto'
 
