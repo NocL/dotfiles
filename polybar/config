@@ -43,12 +43,13 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = SF Pro Display:weight=bold:pixelsize=11
+font-1 = Migu 1M:style=Bold:pixelsize=11
 font-2 = Material Icons:style=Regular:pixelsize=11
 font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10
-font-1 = Font Awesome 5 Free:style=Solid:pixelsize=10
+font-5 = Font Awesome 5 Free:style=Solid:pixelsize=10
 font-4 = Font Awesome 5 Brands:pixelsize=10
 
-modules-left = date
+modules-left = date spotify
 modules-center = i3
 modules-right = filesystem memory cpu wlan eth battery temperature 
 
@@ -195,6 +196,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
+
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 ;format-underline = #f90000
@@ -375,5 +377,14 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 5
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format = <label>
+exec = python ~/.config/polybar/spotify.py -t 42
+;format-underline = #1db954
 
 ; vim:ft=dosini
