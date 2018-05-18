@@ -43,12 +43,14 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = SF Pro Display:weight=bold:pixelsize=11
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
+font-2 = Material Icons:style=Regular:pixelsize=11
+font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10
+font-1 = Font Awesome 5 Free:style=Solid:pixelsize=10
+font-4 = Font Awesome 5 Brands:pixelsize=10
 
-modules-left = i3 
-modules-center = xwindow
-modules-right = filesystem memory cpu wlan eth battery temperature date 
+modules-left = date
+modules-center = i3
+modules-right = filesystem memory cpu wlan eth battery temperature 
 
 tray-position = right
 tray-padding = 2
@@ -97,7 +99,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#ffb52a} %{F-}%percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -107,6 +109,7 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
+; label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
@@ -127,7 +130,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -192,18 +195,18 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
 ;format-underline = #f90000
-label = CPU : %percentage:2%%
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
 ;format-underline = #4bffdc
-label = Memory : %percentage_used%%
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -212,7 +215,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 ;format-connected-underline = #9f78e1
-label-connected = Wlan : %essid%
+label-connected = %essid%
 
 format-disconnected = Wlan : down
 ;format-disconnected = <label-disconnected>
@@ -220,12 +223,12 @@ format-disconnected = Wlan : down
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.primary}
 
 [module/eth]
 type = internal/network
@@ -253,8 +256,8 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = 
+format-prefix-foreground = ${colors.primary}
 ;format-underline = #0a6cf5
 
 label = %date% %time%

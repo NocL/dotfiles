@@ -3,7 +3,7 @@
 # Language
 export LANG=en_US.UTF-8
 
-# Powerline 
+# Powerline
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
 }
@@ -29,6 +29,10 @@ esac
 
 # tmux
 [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export rvm_ignore_gemrc_issues=1
 
 # alias
 alias ls='ls --color=auto'
@@ -58,7 +62,7 @@ source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 # zplug hilghting
 zplug "zsh-users/zsh-syntax-highlighting"
-# history 
+# history
 zplug "zsh-users/zsh-history-substring-search"
 # completion
 zplug "zsh-users/zsh-autosuggestions"
@@ -70,3 +74,6 @@ zplug load
 # for fuckin %
 sleep 1 && clear
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(rbenv init -)"
