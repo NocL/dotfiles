@@ -35,7 +35,8 @@ set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
-
+" molokai color scheme
+let g:molokai_original = 1
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
@@ -72,6 +73,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'Shougo/neocomplete.vim'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
+" neocomplete setting
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
+" INSERTからNORMALへ
+inoremap <silent> jj <ESC>:w<CR>
