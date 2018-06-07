@@ -28,7 +28,7 @@ case $TERM in
 esac
 
 # tmux
-[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+# [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -36,7 +36,8 @@ export rvm_ignore_gemrc_issues=1
 
 # alias
 alias ls='ls --color=auto'
-
+alias emacs='emacs -nw -a ""'
+alias ekill='emacsclient -e "(kill-emacs)"'
 
 # History
 HISTFILE=~/.zsh_history

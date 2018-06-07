@@ -4,9 +4,7 @@ allow_bold = true
 #clickable_url = true
 dynamic_title = true
 #font = Ricty Regular 12
-#font = Migu 1M Regular 12
 font = Hack Regular 12
-#font = Ubuntu Mono derivative Powerline Regular 13
 
 #fullscreen = true
 #geometry = 640x480
@@ -42,6 +40,34 @@ scrollback_lines = 10000
 # "off", "left" or "right"
 #scrollbar = off
 
+
+[colors]
+foreground = rgb(239, 240, 235)
+foreground_bold = rgb(239, 240, 235)
+background = rgb(40, 42, 56)
+
+# If unset, will reverse foreground and background
+highlight = #2f2f2f
+
+# Colors from original hyper-snazzy theme
+color0 = rgb(40,42,56)
+color1 = rgb(255,92,87)
+color2 = rgb(90,247,142)
+color3 = rgb(243,249,157)
+color4 = rgb(87,199,255)
+color5 = rgb(255,106,193)
+color6 = rgb(154,237,254)
+color7 = rgb(241,241,240)
+
+# Other default termite colors
+color9 = #dca3a3
+color10 = #c3bf9f
+color11 = #f0dfaf
+color12 = #94bff3
+color13 = #ec93d3
+color14 = #93e0e3
+color15 = #ffffff
+
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
@@ -52,69 +78,70 @@ scrollback_lines = 10000
 #foreground_bold = #ffffff
 #background = #3f3f3f
 
-foreground = #E9DAB2
+#foreground = #E9DAB2
 
 # 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.9)
+#background = rgba(63, 63, 63, 0.9)
+background = rgba(40, 42, 56, 0.9) 
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+#highlight = #2f2f2f
 
 # dark0 + gray
-color0 = #282828
-color8 = #928374
+#color0 = #282828
+#color8 = #928374
 # neutral_red + bright_red
-color1 = #cc241d
-color9 = #fb4934
+#color1 = #cc241d
+#color9 = #fb4934
 # neutral_green + bright_green
-color2 = #98971a
-color10 = #b8bb26
+#color2 = #98971a
+#color10 = #b8bb26
 # neutral_yellow + bright_yellow
-color3 = #d79921
-color11 = #fabd2f
+#color3 = #d79921
+#color11 = #fabd2f
 # neutral_blue + bright_blue
-color4 = #458588
-color12 = #83a598
+#color4 = #458588
+#color12 = #83a598
 # neutral_purple + bright_purple
-color5 = #b16286
-color13 = #d3869b
+#color5 = #b16286
+#color13 = #d3869b
 # neutral_aqua + faded_aqua
-color6 = #689d6a
-color14 = #8ec07c
+#color6 = #689d6a
+#color14 = #8ec07c
 # light4 + light1
-color7 = #a89984
-color15 = #ebdbb2
+#color7 = #a89984
+#color15 = #ebdbb2
 
-color24 = #076678
-color66 = #427b58
-color88 = #9d0006
-color96 = #8f3f71
-color100 = #79740e
-color108 = #8ec07c
-color109 = #83a598
-color130 = #af3a03
-color136 = #b57614
-color142 = #b8bb26
-color167 = #fb4934
-color175 = #d3869b
-color208 = #fe8019
-color214 = #fabd2f
-color223 = #ebdbb2
-color228 = #f2e5bc
-color229 = #fbf1c7
-color230 = #f9f5d7
-color234 = #1d2021
-color235 = #282828
-color236 = #32302f
-color237 = #3c3836
-color239 = #504945
-color241 = #665c54
-color243 = #7c6f64
-color244 = #928374
-color245 = #928374
-color246 = #a89984
-color248 = #bdae93
-color250 = #d5c4a1
+#color24 = #076678
+#color66 = #427b58
+#color88 = #9d0006
+#color96 = #8f3f71
+#color100 = #79740e
+#color108 = #8ec07c
+#color109 = #83a598
+#color130 = #af3a03
+#color136 = #b57614
+#color142 = #b8bb26
+#color167 = #fb4934
+#color175 = #d3869b
+#color208 = #fe8019
+#color214 = #fabd2f
+#color223 = #ebdbb2
+#color228 = #f2e5bc
+#color229 = #fbf1c7
+#color230 = #f9f5d7
+#color234 = #1d2021
+#color235 = #282828
+#color236 = #32302f
+#color237 = #3c3836
+#color239 = #504945
+#color241 = #665c54
+#color243 = #7c6f64
+#color244 = #928374
+#color245 = #928374
+#color246 = #a89984
+#color248 = #bdae93
+#color250 = #d5c4a1
 
 [hints]
 #font = Monospace 12
